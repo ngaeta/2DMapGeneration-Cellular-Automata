@@ -24,7 +24,7 @@ public class Map2DGeneration {
 		initializeMap(seed);
 		
 		for (int i = 0; i < steps; i++) {
-			generate();			
+			initialMap = generate();			
 		}
 	}
 	
@@ -132,7 +132,7 @@ public class Map2DGeneration {
 		}
 	}
 
-	private void generate() {
+	private int[][] generate() {
 		int[][] result = Arrays.stream(initialMap).map(r -> r.clone()).toArray(int[][]::new);
 		
 		for (int i = 1; i < initialMap.length-1; i++) {
@@ -149,6 +149,8 @@ public class Map2DGeneration {
 				}
 			}
 		}
+		
+		return result;
 	}
 	
 	private int countWallAround(int[][] matrix, int row, int col) {

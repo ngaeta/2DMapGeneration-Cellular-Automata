@@ -3,8 +3,8 @@ package it.aiv;
 public class App {
 
 	public static void main(String[] args) {
-		int rows = 40;
-		int cols = 40;
+		int rows = 48;
+		int cols = 48;
 		int steps = 3;
 		int seed = 1;
 		int n=2;
@@ -21,7 +21,7 @@ public class App {
 			seed = Integer.parseInt(args[3]);
 		
 		if(args.length == 5) 
-			seed = Integer.parseInt(args[4]);
+			n = Integer.parseInt(args[4]);
 		
 		Map2DGeneration map = new Map2DGeneration(rows, cols);
 		
@@ -43,7 +43,7 @@ public class App {
 			for (int j = 0; j < matrix[i].length; j++) {
 				int value = matrix[i][j];
 
-				if (value == 1) System.out.print(value + " ");
+				if (value == 1) System.out.print("x ");
 				else System.out.print("  ");
 			}
 			System.out.println();
