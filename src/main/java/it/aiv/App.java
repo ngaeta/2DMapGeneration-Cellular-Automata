@@ -37,7 +37,7 @@ public class App {
 			for (int j = 0; j < matrix[i].length; j++) {
 				int value = matrix[i][j];
 
-				if (value == 1) System.out.print("x ");
+				if (value == 1) System.out.print(value + " ");
 				else System.out.print("  ");
 			}
 			System.out.println();
